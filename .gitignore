@@ -1,0 +1,144 @@
+# Build artifacts
+build/
+Build/
+Debug/
+Release/
+out/
+bin/
+obj/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+*.lst
+*.su
+*.d
+*.ld.bak
+
+# Linker / preprocessor intermediates
+*.i
+*.s
+!startup_*.s
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+CMakeUserPresets.json
+
+# Ninja
+.ninja_deps
+.ninja_log
+
+# STM32CubeIDE / Eclipse
+.metadata/
+.settings/
+.cproject
+.project
+.launches/
+*.launch
+Debug/
+Release/
+RemoteSystemsTempFiles/
+
+# STM32CubeMX
+*.ioc.bak
+
+# Keil uVision
+*.uvguix.*
+*.uvopt
+*.uvoptx
+*.bak
+*.dep
+*.crf
+*.axf
+*.htm
+*.lnp
+*.plg
+*.tra
+JLinkLog.txt
+JLinkSettings.ini
+
+# IAR
+settings/
+*.dep
+*.ewt
+*.ewd.bak
+*.eww.bak
+Backup*.*
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# Clangd / ccls
+.cache/
+.clangd/
+.ccls-cache/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python (for build scripts, OpenOCD configs, etc.)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Logs / debug
+*.log
+*.tmp
+*.swp
+core
+core.*
+
+# Coverage / analysis
+*.gcda
+*.gcno
+*.gcov
+coverage/
+*.profraw
+*.profdata
+cppcheck-report.xml
+
+# Doxygen
+docs/html/
+docs/latex/
+docs/xml/
+
+# OpenOCD / GDB
+.gdb_history
+openocd.log
