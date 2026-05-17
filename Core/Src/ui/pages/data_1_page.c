@@ -16,7 +16,6 @@
 #define DIVIDER_Y 9
 #define VALUE_Y 20
 #define LABEL_X 0
-#define DISPLAY_WIDTH_PX 127
 
 /////////////////////////////////////////////////
 ///////// PRIVATE FUNCTION DECLARATIONS /////////

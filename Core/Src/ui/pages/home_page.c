@@ -33,7 +33,6 @@ static const menu_item_t menu_items[] = {
 #define MENU_ROW_HEIGHT 10
 #define CURSOR_X 0
 #define LABEL_X 8
-#define DISPLAY_WIDTH_PX 127
 
 /////////////////////////////////////////////////
 //////////////// PAGE STATE /////////////////////

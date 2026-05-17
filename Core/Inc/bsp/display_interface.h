@@ -8,6 +8,7 @@
 #define DISPLAY_WIDTH 128
 #define DISPLAY_HEIGHT 32
 #define DISPLAY_PAGES 4 // 32 / 8 = 4 pages
+#define DISPLAY_WIDTH_PX (DISPLAY_WIDTH - 1)
 
 ////////////////////////////////
 /////////SSD1306 Macros/////////

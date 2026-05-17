@@ -6,6 +6,7 @@
 
 static bool initialized = false;
 static float internal_data = 0.0f;
+static timer_t timer = {0};
 
 int data_manager_init(void)
 {
@@ -18,6 +19,8 @@ int data_manager_init(void)
 
     LOG_INFO("Initialized data manager");
 
+    timer_start(&timer, HAL_TIME_1_SEC * 5);
+
     return 0;
 }
 
@@ -28,7 +31,11 @@ int data_manager_task(void)
         return -1;
     }
 
-    internal_data += 0.01;
+    if (timer_is_done(&timer))
+    {
+        internal_data += 0.01;
+        timer_restart(&timer);
+    }
 
     return 0;
 }
