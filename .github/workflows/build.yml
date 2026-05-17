@@ -1,4 +1,4 @@
-name: Build Success
+name: Build
 
 on: [push]
 
@@ -18,8 +18,13 @@ jobs:
       - name: Install CMake
         run: sudo apt-get install -y cmake
 
-      - name: Make build script executable
-        run: chmod +x ./build.sh
+      - name: Configure CMake (Release)
+        run: |
+          mkdir -p build
+          cd build
+          cmake .. -DCMAKE_TOOLCHAIN_FILE=cmake/gcc-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Release
 
-      - name: Build project (Release)
-        run: ./build.sh --release
+      - name: Build
+        run: |
+          cd build
+          cmake --build . --config Release
