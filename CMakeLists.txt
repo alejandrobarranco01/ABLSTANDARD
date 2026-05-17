@@ -58,6 +58,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Core/Src/bsp/interrupt_handler.c
     Core/Src/bsp/uart.c
 
+    Core/Src/core/data_manager.c
+
     Core/Src/ui/pages/home_page.c
     Core/Src/ui/pages/data_1_page.c
     Core/Src/ui/pages/data_2_page.c
@@ -73,6 +75,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     Core/Inc/bsp
+    Core/Inc/core
     Core/Inc/ui
     Core/Inc/ui/pages
     Core/Inc/utils

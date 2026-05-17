@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "ui.h"
 #include "interrupt_handler.h"
+#include "data_manager.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,6 +105,11 @@ int main(void)
         LOG_ERROR("Failed to initialize interrupt handler");
         return -1;
     }
+    if (data_manager_init())
+    {
+        LOG_ERROR("Failed to initialize data manager");
+        return -1;
+    }
     if (ui_init())
     {
         LOG_ERROR("Failed to initialize UI");
@@ -119,6 +125,7 @@ int main(void)
 
         /* USER CODE BEGIN 3 */
         interrupt_handler_task();
+        data_manager_task();
         ui_task();
     }
     /* USER CODE END 3 */

@@ -3,7 +3,7 @@
 #include "main.h"
 #include "ui.h"
 #include "home_page.h"
-// #include "data/data_manager.h"
+#include "data_manager.h"
 
 #include <stdio.h>
 
@@ -50,10 +50,10 @@ static void data_1_page_render(void)
 
     char value_str[32];
 
-    // int32_t value = data_manager_get_data(DATA_ID_1);
-    int32_t value = 0;
+    float value;
+    data_manager_get_data(&value);
 
-    (void) snprintf(value_str, sizeof(value_str), "Value: %ld", (long) value);
+    snprintf(value_str, sizeof(value_str), "Value: %.2f", (double) value);
     display_draw_text(LABEL_X, VALUE_Y, value_str, FONT_SIZE_SMALL, true);
 }
 

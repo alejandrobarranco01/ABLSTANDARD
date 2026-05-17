@@ -41,8 +41,6 @@ int ui_init(void)
 
     ui_set_page(home_page);
 
-    LOG_INFO("Initialized UI");
-
     return 0;
 }
 
